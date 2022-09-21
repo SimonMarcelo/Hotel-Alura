@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-10">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/Programacion/Sprint 2 - Hotel Alura/jcalendar-1.4.jar"/>
+	<classpathentry kind="lib" path="D:/Programacion/Sprint 2 - Hotel Alura/c3p0-0.9.5.4.jar"/>
+	<classpathentry kind="lib" path="D:/Programacion/Sprint 2 - Hotel Alura/mchange-commons-java-0.2.16.jar"/>
+	<classpathentry kind="lib" path="D:/Programacion/Sprint 2 - Hotel Alura/mysql-connector-java-8.0.17.jar"/>
+	<classpathentry kind="lib" path="D:/Programacion/Sprint 2 - Hotel Alura/jgoodies-common-1.2.0.jar"/>
+	<classpathentry kind="lib" path="D:/Programacion/Sprint 2 - Hotel Alura/jgoodies-looks-2.4.1.jar"/>
+	<classpathentry kind="lib" path="D:/Programacion/Sprint 2 - Hotel Alura/junit-4.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

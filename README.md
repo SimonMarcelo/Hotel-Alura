@@ -6,9 +6,11 @@
 
 ---
 
+<h3>Comparto un video en el que se muestra la funcionalidad de la plataforma.</h3>
+<p align="center" >
 <img src="src/imagenes/Hotel_Alura.gif">
-
-## 🖥️ Tecnologías Utilizadas:
+</p>
+ 🖥️ Tecnologías Utilizadas:
 
 - Java
 - Eclipse
@@ -17,7 +19,7 @@
 - Plugin WindowBuilder </br>
 
 ---
-## ⚠️ Importante! ⚠️
+ ⚠️ Importante! ⚠️
 
 ☕ Para la realización de este proyeco utilicé la versión 10 de Java. </br></br>
 

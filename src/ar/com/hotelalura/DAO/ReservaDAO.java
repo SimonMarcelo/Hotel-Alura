@@ -120,7 +120,6 @@ public class ReservaDAO {
 				statement.setString(3, valor);
 				statement.setString(4, forma_Pago);
 				statement.setInt(5, id);
-				System.out.println(statement);
 				statement.execute();
 
 				int updateCount = statement.getUpdateCount();

@@ -61,7 +61,6 @@ public class HuespedDAO {
 		List<Huesped> resultado = new ArrayList<>();
 		try {
 			var querySelect = "SELECT ID, NOMBRE, APELLIDO, FECHA_DE_NACIMIENTO, NACIONALIDAD, TELEFONO, ID_RESERVA FROM HUESPEDES";
-			System.out.println(querySelect);
 
 			final PreparedStatement statement = con.prepareStatement(querySelect);
 

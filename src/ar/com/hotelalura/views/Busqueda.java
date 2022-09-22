@@ -227,12 +227,13 @@ public class Busqueda extends JFrame {
 				limpiarTabla();
 				System.out.println(txtBuscar.getText());
 				if (txtBuscar.getText() != "") {
-				cargarBusqueda();
-			} else if (txtBuscar.getText() == "") {
-				cargarTablaHuespedes();
-				cargarTablaReservas();
+					cargarBusqueda();
+				} else if (txtBuscar.getText() == "") {
+					cargarTablaHuespedes();
+					cargarTablaReservas();
+				}
 			}
-			}});
+		});
 		btnbuscar.setLayout(null);
 		btnbuscar.setBackground(new Color(12, 138, 199));
 		btnbuscar.setBounds(748, 125, 122, 35);
@@ -352,7 +353,7 @@ public class Busqueda extends JFrame {
 	}
 
 	private void modificar() {
-		
+
 		ReservaController reservaController = new ReservaController();
 		HuespedController huespedController = new HuespedController();
 
@@ -369,11 +370,9 @@ public class Busqueda extends JFrame {
 						Date checkout = Date.valueOf(modelo.getValueAt(tbReservas.getSelectedRow(), 2).toString());
 						String valor = (String) modelo.getValueAt(tbReservas.getSelectedRow(), 3);
 						String formaPago = (String) modelo.getValueAt(tbReservas.getSelectedRow(), 4);
-						var filasModificadas = reservaController.modificar(checkin, checkout, valor, formaPago,
-								id);
+						reservaController.modificar(checkin, checkout, valor, formaPago, id);
 
-						JOptionPane.showMessageDialog(this,
-								String.format("%d reserva modificada con éxito!", filasModificadas));
+						Exito.main(null);
 					}, () -> JOptionPane.showMessageDialog(this, "Por favor, elije un item"));
 		}
 		if (noTieneFilaElegidaReservas()) {
@@ -382,48 +381,46 @@ public class Busqueda extends JFrame {
 						Integer id = Integer.valueOf(modeloH.getValueAt(tbHuespedes.getSelectedRow(), 0).toString());
 						String nombre = (String) modeloH.getValueAt(tbHuespedes.getSelectedRow(), 1);
 						String apellido = (String) modeloH.getValueAt(tbHuespedes.getSelectedRow(), 2);
-						Date fechaNacimiento = Date.valueOf(modeloH.getValueAt(tbHuespedes.getSelectedRow(), 3).toString());
+						Date fechaNacimiento = Date
+								.valueOf(modeloH.getValueAt(tbHuespedes.getSelectedRow(), 3).toString());
 						String nacionalidad = (String) modeloH.getValueAt(tbHuespedes.getSelectedRow(), 4);
 						int telefono = Integer.valueOf(modeloH.getValueAt(tbHuespedes.getSelectedRow(), 5).toString());
 						int idReserva = Integer.valueOf(modeloH.getValueAt(tbHuespedes.getSelectedRow(), 6).toString());
-						var filasModificadas = huespedController.modificarHuesped(nombre, apellido,
-								fechaNacimiento, nacionalidad, telefono, idReserva, id);
+						huespedController.modificarHuesped(nombre, apellido, fechaNacimiento, nacionalidad, telefono,
+								idReserva, id);
 
-						JOptionPane.showMessageDialog(this,
-								String.format("%d huesped modificado con éxito!", filasModificadas));
+						Exito.main(null);
 					}, () -> JOptionPane.showMessageDialog(this, "Por favor, elije un item"));
 		}
 	}
 
 	private void eliminar() {
-		
+
 		ReservaController reservaController = new ReservaController();
 		HuespedController huespedController = new HuespedController();
-		
+
 		if (noTieneFilaElegidaHuespedes() && noTieneFilaElegidaReservas()) {
 			JOptionPane.showMessageDialog(this, "Por favor, elije un item");
 			return;
 		}
 		if (noTieneFilaElegidaHuespedes()) {
-		Optional.ofNullable(modelo.getValueAt(tbReservas.getSelectedRow(), tbReservas.getSelectedColumn()))
-				.ifPresentOrElse(fila -> {
-					Integer id = Integer.valueOf(modelo.getValueAt(tbReservas.getSelectedRow(), 0).toString());
-					var filasModificadas = reservaController.eliminar(id);
+			Optional.ofNullable(modelo.getValueAt(tbReservas.getSelectedRow(), tbReservas.getSelectedColumn()))
+					.ifPresentOrElse(fila -> {
+						Integer id = Integer.valueOf(modelo.getValueAt(tbReservas.getSelectedRow(), 0).toString());
+						reservaController.eliminar(id);
 
-					JOptionPane.showMessageDialog(this,
-							String.format("%d item eliminado con éxito!", filasModificadas));
-				}, () -> JOptionPane.showMessageDialog(this, "Por favor, elije un item"));
+						Exito.main(null);
+					}, () -> JOptionPane.showMessageDialog(this, "Por favor, elije un item"));
 		}
 		if (noTieneFilaElegidaReservas()) {
 			Optional.ofNullable(modeloH.getValueAt(tbHuespedes.getSelectedRow(), tbHuespedes.getSelectedColumn()))
 					.ifPresentOrElse(fila -> {
 						Integer id = Integer.valueOf(modeloH.getValueAt(tbHuespedes.getSelectedRow(), 0).toString());
-						var filasModificadas = huespedController.eliminarHuesped(id);
+						huespedController.eliminarHuesped(id);
 
-						JOptionPane.showMessageDialog(this,
-								String.format("%d huesped eliminado con éxito!", filasModificadas));
+						Exito.main(null);
 					}, () -> JOptionPane.showMessageDialog(this, "Por favor, elije un item"));
-			}
+		}
 	}
 
 	// Código que permite mover la ventana por la pantalla según la posición de "x"

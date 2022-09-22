@@ -33,10 +33,6 @@ public class ReservaController {
 		return reservaDAO.listarReservas(busqueda);
 	}
 	
-//	public List<Reserva> listar(Huesped huesped) {
-//		return reservaDAO.listar(huesped.getId());
-//	}
-
 	public void guardar(Reserva reserva) {
 		reservaDAO.guardar(reserva);
 	}

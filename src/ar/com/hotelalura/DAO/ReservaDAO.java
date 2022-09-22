@@ -38,7 +38,7 @@ public class ReservaDAO {
 
 	private void ejecutaRegistro(Reserva reserva, PreparedStatement statement) throws SQLException {
 
-		statement.setDate(1, reserva.getCheckin()); // REVISAR SI CARGA OK
+		statement.setDate(1, reserva.getCheckin()); 
 		statement.setDate(2, reserva.getCheckout());
 		statement.setString(3, reserva.getValorReserva());
 		statement.setString(4, reserva.getFormaPago());

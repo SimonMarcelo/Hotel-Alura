@@ -410,7 +410,6 @@ public class Busqueda extends JFrame {
 					Integer id = Integer.valueOf(modelo.getValueAt(tbReservas.getSelectedRow(), 0).toString());
 					var filasModificadas = reservaController.eliminar(id);
 
-//					modelo.removeRow(tbReservas.getSelectedRow());
 					JOptionPane.showMessageDialog(this,
 							String.format("%d item eliminado con éxito!", filasModificadas));
 				}, () -> JOptionPane.showMessageDialog(this, "Por favor, elije un item"));
@@ -421,7 +420,6 @@ public class Busqueda extends JFrame {
 						Integer id = Integer.valueOf(modeloH.getValueAt(tbHuespedes.getSelectedRow(), 0).toString());
 						var filasModificadas = huespedController.eliminarHuesped(id);
 
-//						modeloH.removeRow(tbHuespedes.getSelectedRow());
 						JOptionPane.showMessageDialog(this,
 								String.format("%d huesped eliminado con éxito!", filasModificadas));
 					}, () -> JOptionPane.showMessageDialog(this, "Por favor, elije un item"));

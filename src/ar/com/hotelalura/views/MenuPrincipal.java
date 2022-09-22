@@ -106,38 +106,6 @@ public class MenuPrincipal extends JFrame {
 		header.setLayout(null);
 		header.setBackground(Color.lightGray);
 		panel.add(header);
-//
-//		// Botón salir
-//		JPanel btnexit = new JPanel();
-//		btnexit.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mouseClicked(MouseEvent e) {
-//				System.exit(0);
-//			}
-//
-//			@Override
-//			public void mouseEntered(MouseEvent e) {
-//				btnexit.setBackground(Color.red);
-//				labelExit.setForeground(Color.white);
-//			}
-//
-//			@Override
-//			public void mouseExited(MouseEvent e) {
-//				btnexit.setBackground(Color.white);
-//				labelExit.setForeground(Color.black);
-//			}
-//		});
-//		btnexit.setLayout(null);
-//		btnexit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-//		btnexit.setBackground(Color.lightGray);
-//		btnexit.setBounds(857, 0, 53, 36);
-//		header.add(btnexit);
-//
-//		labelExit = new JLabel("X");
-//		labelExit.setBounds(0, 0, 53, 36);
-//		btnexit.add(labelExit);
-//		labelExit.setHorizontalAlignment(SwingConstants.CENTER);
-//		labelExit.setFont(new Font("Roboto", Font.PLAIN, 18));
 
 		// Botón Login
 		JPanel btnLogin = new JPanel();

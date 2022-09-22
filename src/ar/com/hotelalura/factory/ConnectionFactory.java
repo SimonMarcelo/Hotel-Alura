@@ -1,8 +1,6 @@
 package ar.com.hotelalura.factory;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import javax.sql.DataSource;
@@ -30,22 +28,5 @@ public class ConnectionFactory {
 			throw new RuntimeException(e);
 		}
 	}
-
-	/*public static void main(String[] args) {
-		try {
-			Connection con = DriverManager.getConnection(
-					"jdbc:mysql://localhost/hotel_alura?useTimeZone=true&serverTimeZone=UTC", "root", "root");
-			
-			PreparedStatement statement = con.prepareStatement("Select * from huespedes");
-			
-			statement.execute();
-			
-			System.out.println("Cerrando conexion");
-			
-			con.close();
-		} catch (SQLException e) {
-			System.out.println("No se conectó");
-		}
-	}*/
 
 }

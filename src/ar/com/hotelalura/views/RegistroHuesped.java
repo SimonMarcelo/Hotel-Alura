@@ -276,7 +276,6 @@ public class RegistroHuesped extends JFrame {
 		btnguardar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-//GUARDAR HUESPED
 
 				String fechaNacimiento = ((JTextField) txtFechaN.getDateEditor().getUiComponent()).getText();
 				int telefonoInt = Integer.parseInt(txtTelefono.getText());
@@ -289,7 +288,6 @@ public class RegistroHuesped extends JFrame {
 				registro.setVisible(true);
 				limpiar();
 
-//HASTA ACÁ
 			}
 		});
 		btnguardar.setLayout(null);

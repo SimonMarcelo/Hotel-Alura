@@ -35,9 +35,5 @@ public class HuespedController {
 	public int eliminarHuesped(Integer id) {
 		return huespedDAO.eliminarHuesped(id);
 	}
-//    public List<Huesped> cargaReporte() {
-//        
-//        return this.categoriaDAO.listarConProductos();
-//    }
 
 }

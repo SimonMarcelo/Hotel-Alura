@@ -15,9 +15,9 @@ public class ConnectionFactory {
 
 	public ConnectionFactory() {
 		var comboPooledDataSource = new ComboPooledDataSource();
-		comboPooledDataSource.setJdbcUrl("jdbc:mysql://us-cdbr-east-06.cleardb.net/heroku_2d81feecdead1bd?useTimeZone=true&serverTimeZone=UTC");
-		comboPooledDataSource.setUser("bd8065a253779c");
-		comboPooledDataSource.setPassword("35e02bf2");
+		comboPooledDataSource.setJdbcUrl("jdbc:mysql://localhost/hotel_alura?useTimeZone=true&serverTimeZone=UTC");
+		comboPooledDataSource.setUser("root");
+		comboPooledDataSource.setPassword("root");
 		comboPooledDataSource.setMaxPoolSize(10);
 
 		this.dataSource = comboPooledDataSource;
